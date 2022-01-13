@@ -247,6 +247,10 @@ LATEST COURSE
     .player{
         flex-direction: column;
     }
+    .player img{
+        width: 80px;
+        height: 80px;
+    }
 
     .blogs, .courses{       
         grid-template-columns: repeat(1,1fr); 
