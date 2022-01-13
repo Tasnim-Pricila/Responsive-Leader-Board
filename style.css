@@ -19,9 +19,9 @@ h1{
     color: #562EFF;
 }
 main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 870px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 .container{
     background-color: #FFFFFF;
@@ -30,8 +30,8 @@ main{
     margin-bottom: 21px;
 }
 hr{
-    color: #D1D1D1;
-    width: 807px;
+    color: #D1D1D1;  
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -42,8 +42,8 @@ hr{
 .header-area{
     background-color: #562EFF;   
     margin-bottom: 36px;
-    border: 8px solid;
     max-width: 100%;
+  
 }
 .header{
     display: flex;
@@ -92,6 +92,10 @@ hr{
     margin-left: 33px;
     font-weight: 500;
 }
+.top-players h1, .latest-course h1{
+    padding-top:33px ;
+   
+}
  .players{
      display: grid;
      grid-template-columns: repeat(3,1fr); 
@@ -124,8 +128,9 @@ hr{
       grid-template-columns: repeat(2,1fr);
       grid-column-gap:65px ;
       padding-left: 33px;
-      margin-bottom: 42px;
+      padding-bottom: 42px;
       grid-row-gap: 26px;
+      padding-right: 15px;
  }
   
 .blog{
@@ -162,13 +167,13 @@ LATEST COURSE
     grid-column-gap: 26px;
     padding-left: 33px;
     padding-right: 33px;
-    margin-bottom: 22px;   
 }
 .course{
     border: 2px solid white;
     padding: 10px;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.05) , -1px -1px rgba(0, 0, 0, 0.05);
     border-radius: 5%;
+    margin-bottom: 20px;
 }
 .course img{
     width: 224px;
@@ -213,4 +218,96 @@ LATEST COURSE
     border-radius: 15px;
     padding: 5px;
     font-size: 14px;
+}
+
+/*----------------
+ Media Queries 
+ ------------------------*/
+
+@media only screen and (max-width:688px){
+    .header{
+        flex-direction: column;
+        height: 150px;
+    }
+    .container{
+       width: 100%;    
+    }
+
+    .top-players h1, .top-blogs h1, .latest-course h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .players{       
+        grid-template-columns: repeat(1,1fr); 
+        justify-items: center;
+        padding-left: 0;
+    }
+
+    .player{
+        flex-direction: column;
+    }
+
+    .blogs, .courses{       
+        grid-template-columns: repeat(1,1fr); 
+    }
+    
+    .blog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog img {
+        width: 80%;
+        height: 80%;
+        padding-bottom: 5px;
+    }
+
+    .blog-info{
+        align-items: center;
+    }
+
+    .blog-title{
+        text-align: center;
+    }
+    
+    .course img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:992px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs{       
+        grid-template-columns: repeat(2,1fr);    
+    }
+    .blog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog img {
+        width: 80%;
+        height: 80%;
+        padding-bottom: 5px;
+    }
+
+    .blog-info{
+        align-items: center;
+    }
+
+    .blog-title{
+        text-align: center;
+    }
+
+   .courses{       
+        grid-template-columns: repeat(1,1fr); 
+    }
+    .course img{
+        width: 100%;
+        height: auto;
+    }
 }
